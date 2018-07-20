@@ -280,7 +280,8 @@ var Split = function (ids, options) {
         global[removeEventListener]('mouseup', self.stop);
         global[removeEventListener]('touchend', self.stop);
         global[removeEventListener]('touchcancel', self.stop);
-
+	
+	global[removeEventListener]('mousemove', self.move);
         self.parent[removeEventListener]('mousemove', self.move);
         self.parent[removeEventListener]('touchmove', self.move);
 
@@ -337,7 +338,8 @@ var Split = function (ids, options) {
         global[addEventListener]('mouseup', self.stop);
         global[addEventListener]('touchend', self.stop);
         global[addEventListener]('touchcancel', self.stop);
-
+	
+	global[addEventListener]('mousemove', self.move);
         self.parent[addEventListener]('mousemove', self.move);
         self.parent[addEventListener]('touchmove', self.move);
 
